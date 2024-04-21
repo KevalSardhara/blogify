@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 
 // Set the region to Asia Mumbai (ap-south-1)
-AWS.config.update({ region: 'ap-south-1' });
+AWS.config.update({ region: 'us-east-1' });
 
 // Create an S3 instance
 const s3 = new AWS.S3();
