@@ -8,7 +8,7 @@ const s3 = new AWS.S3();
 
 // Example: Download an object from an S3 bucket
 const params = {
-    Bucket: 'blogify',
+    Bucket: 'github',
     Key: 'KevalSardhara/blogify.git'
 };
 
