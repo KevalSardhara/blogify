@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Page</title>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+        
+        <div class="container mt-5">
+            <form action="/blog" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="text" name="title" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="coverImage" class="form-label">Cover Image</label>
+                    <input type="file" class="form-control" id="coverImage" name="coverImageURL" aria-describedby="coverImage">
+                </div>
+                <div class="mb-3">
+                    <label for="body" class="form-label">Text</label>
+                    <textarea class="form-control" placeholder="Leave a blog area here" id="body" name="body"
+                        style="height: 200px"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <%- include('./partials/script.ejs') %>
+</body>
+
+</html>
