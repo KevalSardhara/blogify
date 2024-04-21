@@ -1,4 +1,5 @@
 const dotenv = require("dotenv");
+require("./aws-s3-bucket.js");
 
 const express = require("express");
 const path = require("path");
