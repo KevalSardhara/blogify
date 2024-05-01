@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+</head>
+
+<body>
+    Chat App
+    <button type="button" onclick="createConnection()">Create Socket</button>
+
+    <input type="text" id="message" placeholder="message">
+    <button type="button" id="sendBtn">Create Socket</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // const socket = io(); //  // varification
+        const socket = io('/user-namesapce', {
+            auth : {
+                token : "pass user token here or id",
+            }
+        });
+
+
+
+        console.log(socket);
+
+        const messageInput = document.getElementById('message');
+
+        // socket.emit("varify", socket);
+
+        sendBtn.addEventListener("click", (e) => {
+            const messageValue = messageInput.value;
+            socket.emit("resMessage", { userMessage: messageValue });
+        });
+        socket.on("reqMessage", function (message) {
+            console.log("reqMessage", message);
+        });
+
+    </script>
+</body>
+
+</html>
+
+<!-- // function createConnection() {
+//     const socket = io();
+// } -->
+
+<!-- <script type="module">
+        import { io } from "https://cdn.socket.io/4.7.5/socket.io.esm.min.js";
+      
+        const socket = io();
+      </script> -->

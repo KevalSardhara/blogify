@@ -10,7 +10,7 @@
 
 <body>
     <%- include('./partials/nav.ejs') %>
-        
+
         <div class="container mt-5">
             <form action="/blog" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
@@ -19,7 +19,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="coverImage" class="form-label">Cover Image</label>
-                    <input type="file" class="form-control" id="coverImage" name="coverImageURL" aria-describedby="coverImage">
+                    <input type="file" class="form-control" id="coverImage" name="coverImageURL"
+                        aria-describedby="coverImage">
                 </div>
                 <div class="mb-3">
                     <label for="body" class="form-label">Text</label>
